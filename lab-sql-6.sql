@@ -1,3 +1,5 @@
+-- inserting table with formula as per git --
+
 drop table if exists films_2020;
 CREATE TABLE `films_2020` (
   `film_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -20,11 +22,11 @@ select * from films_2020;
 
 SET SQL_SAFE_UPDATES = 0;
 
-Alter table films_2020 Change rental_duration rental_duration CHAR(34);
+-- Update information on rental_duration, rental_rate, and replacement_cost -- 
 
+Alter table films_2020 Change rental_duration rental_duration CHAR(34);
 Update films_2020  Set rental_duration = "3 days";
 
-SET SQL_SAFE_UPDATES = 0;
 
 Alter table films_2020 Change rental_rate rental_rate char(34);
 Update films_2020  Set rental_rate = "2.99 €";
